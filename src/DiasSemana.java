@@ -66,7 +66,7 @@ public class DiasSemana {
 			} 
 			
 			mes = mes +1;
-			System.out.println("");
+			
 
 			while (semana < 4) 	{
 
