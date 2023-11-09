@@ -9,7 +9,7 @@ public class DiasSemana {
 		int diaSemana;
 		int numeroDia;
 		int mesCompleto;
-		int diaS;
+		int diaR;
 		
 		diaSemana = 0;
 
@@ -29,7 +29,7 @@ public class DiasSemana {
 		 
 		mesCompleto = numeroDia/28;
 		
-		while (mes < mesCompleto + 1) {
+		while (mes < mesCompleto ) {
 
 			if (mes == 0) {
 
@@ -127,7 +127,8 @@ public class DiasSemana {
 			} 
 			System.out.println("");
 			semana = 0;
-		}
+		} diaR = numeroDia - mesCompleto * 28;
+		
 	}
 }
 
