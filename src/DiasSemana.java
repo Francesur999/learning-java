@@ -9,6 +9,7 @@ public class DiasSemana {
 		int diaSemana;
 		int numeroDia;
 		int mesCompleto;
+		int diaS;
 		
 		diaSemana = 0;
 
@@ -27,8 +28,8 @@ public class DiasSemana {
 		
 		 
 		mesCompleto = numeroDia/28;
-
-		while (mes < mesCompleto ) {
+		
+		while (mes < mesCompleto + 1) {
 
 			if (mes == 0) {
 
@@ -129,3 +130,5 @@ public class DiasSemana {
 		}
 	}
 }
+
+
