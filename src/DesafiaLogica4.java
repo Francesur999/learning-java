@@ -20,41 +20,91 @@ public class DesafiaLogica4 {
 		System.out.print("Escribe el tercer numero");
 		n3 = teclado.nextInt();
 
-		if (n1 >= n2 && n1 >= n3) {
+		do {
+			System.out.print("Escribe 1. para que sea ascendente y 2. para que sea descendente");
+			elección = teclado.nextInt();
+		} while (elección != 1 && elección != 2);
 
-			if (n2 > n3 || n2 == n3) {
+		switch (elección) {
+
+		case 1:
+			
+			if (n1 >= n2 && n1 >= n3) {
+
+				if (n2 > n3 || n2 == n3) {
+					System.out.print(n1 + " " + n2 + " " + n3);
+
+				} else if (n3 > n2) {
+					System.out.print(n1 + " " + n3 + " " + n2);
+
+				}
+
+			} else if (n2 >= n1 && n2 >= n3) {
+
+				if (n1 > n3 || n1 == n3) {
+					System.out.print(n2 + " " + n1 + " " + n3);
+
+				} else if (n3 > n1) {
+					System.out.print(n2 + " " + n3 + " " + n1);
+
+				}
+
+			} else if (n3 >= n1 && n3 >= n2) {
+
+				if (n2 > n1 || n2 == n1) {
+					System.out.print(n3 + " " + n2 + " " + n1);
+
+				} else if (n1 > n2) {
+					System.out.print(n3 + " " + n1 + " " + n2);
+
+				}
+
+			} else if (n1 == n2 && n2 == n3) {
+
 				System.out.print(n1 + " " + n2 + " " + n3);
 
-			} else if (n3 > n2) {
-				System.out.print(n1 + " " + n3 + " " + n2);
-
-			}
-
-		} else if (n2 >= n1 && n2 >= n3) {
-
-			if (n1 > n3 || n1 == n3) {
-				System.out.print(n2 + " " + n1 + " " + n3);
-
-			} else if (n3 > n1) {
-				System.out.print(n2 + " " + n3 + " " + n1);
-
-			}
-			
-		} else if (n3 >= n1 && n3 >= n2) {
-
-			if (n2 > n1 || n2 == n1) {
-				System.out.print(n3 + " " + n2 + " " + n1);
-
-			} else if (n1 > n2) {
-				System.out.print(n3 + " " + n1 + " " + n2);
-
-			}
-			
-		} else if (n1==n2 && n2==n3) { 
-			
-			System.out.print(n1 + " " + n2 + " " + n3);
+			} break;
 			
 			
+		     case 2:
+		    	 
+		    	 if (n1 >= n2 && n1 >= n3) {
+
+		 			if (n2 > n3 || n2 == n3) {
+		 				System.out.print(n3 + " " + n2 + " " + n1);
+
+		 			} else if (n3 > n2) {
+		 				System.out.print(n2 + " " + n3 + " " + n1);
+
+		 			}
+
+		 		} else if (n2 >= n1 && n2 >= n3) {
+
+		 			if (n1 > n3 || n1 == n3) {
+		 				System.out.print(n3 + " " + n1 + " " + n2);
+
+		 			} else if (n3 > n1) {
+		 				System.out.print(n1 + " " + n3 + " " + n2);
+
+		 			}
+
+		 		} else if (n3 >= n1 && n3 >= n2) {
+
+		 			if (n2 > n1 || n2 == n1) {
+		 				System.out.print(n1 + " " + n2 + " " + n3);
+
+		 			} else if (n1 > n2) {
+		 				System.out.print(n2 + " " + n1 + " " + n3);
+
+		 			}
+
+		 		} else if (n1 == n2 && n2 == n3) {
+
+		 			System.out.print(n1 + " " + n2 + " " + n3);
+
+		 		} break;
+		    	 
 		}
+
 	}
 }
