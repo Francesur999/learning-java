@@ -28,20 +28,21 @@ public class Arrays {
 			if ((listaInteger[i] % 2) == 0) {
 
 				numPares = numPares + 1;
-                
+
 			} else {
 				numImpar = numImpar + 1;
 			}
-		} System.out.println(" ");
-		System.out.println("Estos son los numeros de pares: "+ numPares);
-		System.out.println("Estos son los numeros de impares: "+numImpar);
+		}
 		System.out.println(" ");
-		
+		System.out.println("Estos son los numeros de pares: " + numPares);
+		System.out.println("Estos son los numeros de impares: " + numImpar);
+		System.out.println(" ");
+
 		listaPares = new int[numPares];
 		contadorP = 0;
 		listaImpares = new int[numImpar];
 		contadorIm = 0;
-		
+
 		System.out.print("Esta es la array de pares:[ ");
 
 		for (int i = 0; i < listaInteger.length; i++) {
@@ -51,13 +52,12 @@ public class Arrays {
 				System.out.print(listaInteger[i] + " ");
 			}
 
-		} 	System.out.println(" ]");
-		    System.out.println("");
-		
+		}
+		System.out.println(" ]");
+		System.out.println("");
+
 		System.out.print("Esta es la array de impares:[ ");
 
-		
-		
 		for (int i = 0; i < listaInteger.length; i++) {
 			if ((listaInteger[i] % 2) != 0) {
 				listaImpares[contadorIm] = listaInteger[i];
@@ -65,8 +65,9 @@ public class Arrays {
 				System.out.print(listaInteger[i] + " ");
 			}
 
-		}	System.out.println(" ]");
-			System.out.println("");
+		}
+		System.out.println(" ]");
+		System.out.println("");
 
 		for (int i = 0; i < listaPares.length; i++) {
 			for (int x = 0; x < listaPares.length - 1 - i; x++) {
@@ -91,22 +92,26 @@ public class Arrays {
 				}
 			}
 		}
-         
+
 		System.out.print("Esta es la array ordenada: [ ");
 		for (int i = 0; i < listaPares.length; i++) {
 
 			listaInteger[i] = listaPares[i];
 			System.out.print(listaInteger[i] + " ");
-		}  System.out.print("|");
+		}
+		System.out.print("|");
 
 		for (int i = numPares; i < listaInteger.length; i++) {
 
 			listaInteger[i] = listaImpares[m];
 			m++;
-			System.out.print( listaInteger[i] + " ");
+			System.out.print(listaInteger[i] + " ");
 		}
-		
+
 		System.out.print(" ] ");
+		
+		
 
 	}
+	
 }
