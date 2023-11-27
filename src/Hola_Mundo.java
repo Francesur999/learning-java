@@ -5,16 +5,23 @@ public class Hola_Mundo {
 	public static void main(String[] args) {
 
 		String cadena = "Hola mundo";
-
+		int indice = 0;
 		for (int i = 0; i < cadena.length(); i++) {
+			
+			indice = i;
+			
 			if (i % 2 == 0) {
-				System.out.println(cadena.toUpperCase().charAt(i));
+				metodo(cadena.toUpperCase(), indice);
 
 			} else {
-				System.out.println(cadena.toLowerCase().charAt(i));
+				metodo(cadena.toLowerCase(), indice);
 			}
+			
 		}
-		cadena = cadena .toUpperCase();
-		System.out.println(cadena);
+
+	}
+
+	static void metodo(String cadena, int indice) {
+		System.out.println(cadena.charAt(indice));
 	}
 }
