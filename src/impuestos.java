@@ -38,6 +38,8 @@ public class impuestos {
 	
 	}while(elección.charAt(0) == 's');
 	
+	System.out.println("Has finalizado el programa");
+	
 	teclado.close();
 	}
 

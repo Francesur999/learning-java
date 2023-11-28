@@ -4,7 +4,34 @@ public class metodos {
 
 	public static void main(String[] args) {
 
-		int valor;
+      valoresCorrectos();
+	}
+
+	static boolean comprobarValor(int max, int min, int valor) {
+
+		if ((valor <= max) && (valor >= min)) {
+
+			return true;
+		} else {
+
+			return false;
+		}
+
+	}
+
+	static boolean comprobarMax (int max, int min) {
+
+		if((min>max)) {
+			
+			return false;
+		} return true;
+		
+
+	}
+
+    static void valoresCorrectos(){
+    	
+    	int valor;
 		int max;
 		int min;
 		Scanner teclado = new Scanner(System.in);
@@ -23,27 +50,5 @@ public class metodos {
 		System.out.println(comprobarValor(max, min, valor));
 
 		teclado.close();
-
-	}
-
-	static boolean comprobarValor(int max, int min, int valor) {
-
-		if ((valor <= max) && (valor >= min)) {
-
-			return true;
-		} else {
-
-			return false;
-		}
-
-	}
-
-	static boolean comprobarMax (int max, int min) {
-		if((min>max)) {
-			
-			return false;
-		} return true;
-		
-
-	}
+    }
 }
