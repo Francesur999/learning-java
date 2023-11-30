@@ -3,8 +3,7 @@ public class metodo2 {
 
 	public static void main(String[] args) {
 
-		System.out.print(uneCadenas("hola", "mundo"));
-		System.out.print(uneCadenas("hey","chaval"));
+		System.out.print(uneCadenas("hola",uneCadenas("mundo",uneCadenas("tercero","nhkj"))));
 	}
 
 	static String uneCadenas(String cadena1, String cadena2) {
