@@ -26,8 +26,8 @@ public class AlumnoCesur {
 		Alumno Alejandro = new Alumno("Alejandro", 23, "DAM");
 		System.out.println(Alejandro.toString());
 		
-		Alumno Adrián = new Alumno("Adrián", 25, "DAM");
-		System.out.println(Adrián.toString());
+		Alumno Adrian = new Alumno("Adrián", 25, "DAM");
+		System.out.println(Adrian.toString());
 		
 		Alumno Sinram = new Alumno("Fran", 23, "DAM");
 		System.out.println(Sinram.toString());
@@ -53,7 +53,7 @@ public class AlumnoCesur {
 		PremiumPlus.add(JuanCarlos);
 		PremiumPlus.add(Alvaro);
 		PremiumPlus.add(Janhin);
-		PremiumPlus.add(Adrián);
+		PremiumPlus.add(Adrian);
 		PremiumPlus.add(Alejandro);
 		PremiumPlus.add(Sinram);
 		
