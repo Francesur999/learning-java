@@ -168,4 +168,10 @@ class Clase {
 			numAlumnos++;
 		}
 	}
+	
+	public void delete(String nombreAlumno) {
+		
+		
+		
+	}
 }
