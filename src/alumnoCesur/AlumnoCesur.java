@@ -35,20 +35,14 @@ public class AlumnoCesur {
 		Alumno Juanan = new Alumno("Juanan", 26, "DAW");
 
 		Clase premiumPlus = new Clase("Premium plus");
+		
+		for(int i= 0 ; i<15; i++) {
+			
+			premiumPlus.add(new Alumno(Creator.newName(),Creator.newAge(),"DAM"));
+			
+		}
+		
 
-		premiumPlus.add(JoseRamon);
-		premiumPlus.add(Andrés);
-		premiumPlus.add(Fran);
-		premiumPlus.add(Santiago);
-		premiumPlus.add(Ramon);
-		premiumPlus.add(Dario);
-		premiumPlus.add(JuanCarlos);
-		premiumPlus.add(Alvaro);
-		premiumPlus.add(Janhin);
-		premiumPlus.add(Adrian);
-		premiumPlus.add(Alejandro);
-		premiumPlus.add(Sinram);
-		premiumPlus.add(Juanan);
 
 		for (int i = 0; i < premiumPlus.getNumAlumnos(); i++) {
 			System.out.println(premiumPlus.getAlumnos()[i]);

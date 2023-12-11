@@ -18,7 +18,7 @@ class Clase {
 		return profesor;
 	}
 
-	public void setMaestro(Profesor profesor) {
+	public void setprofesor(Profesor profesor) {
 		this.profesor = profesor;
 	}
 
@@ -62,6 +62,24 @@ class Clase {
 	
 	public void delete(String nombreAlumno) {
 		
+		int indice = 0 ;
+		
+		while((alumnos[indice].getNombre() != nombreAlumno) && (indice< alumnos.length)){
+			
+			indice++;
+		}
+		
+		if ( indice < alumnos.length) {
+			
+			numAlumnos--;
+			for (int i = indice; i < numAlumnos; i++) {
+				alumnos[i] = alumnos[i + 1];
+			}
+			alumnos[numAlumnos] = null;
+
+		} else { 
+			System.out.println("El alumno [" + alumnos + "] no se encuentra en la clase [" + nombre + "]");
+		}
 		
 		
 		
