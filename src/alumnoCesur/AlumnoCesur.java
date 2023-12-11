@@ -1,8 +1,12 @@
 package alumnoCesur;
+import practicas.Creator;
 
 public class AlumnoCesur {
 
 	public static void main(String[] args) {
+		
+		Profesor teacher = new Profesor("Daniel", 47, "DAM");
+		System.out.println(teacher.getNombre());
 
 		Alumno Fran = new Alumno("Fran", 18, "DAM");
 

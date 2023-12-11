@@ -1,13 +1,15 @@
 package alumnoCesur;
 
-class Alumno extends Persona{
+public class Profesor extends Persona {
 
-	private String curso;
+	String curso;
 
-	public Alumno(String nombre, int edad, String curso) {
+	public Profesor(String nombre, int edad, String curso) {
 		super(nombre, edad);
 		this.curso = curso;
 	}
+
+	
 	public String getCurso() {
 		return curso;
 	}
@@ -15,10 +17,7 @@ class Alumno extends Persona{
 	public void setCurso(String curso) {
 		this.curso = curso;
 	}
-
 	public String toString() {
-
-		return "[Alumno: " + super.getNombre() + ", Edad: " + super.getEdad() + ", Curso: " + curso + "]";
+		return("[" + this.getNombre() + "]");
 	}
-
 }
