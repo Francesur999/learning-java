@@ -1,44 +1,27 @@
 package alumnoCesur;
 
-class Administrativo {
+class Administrativo extends Persona{
 	
 	
 	// Atributos
-
-	String nombre;
-	int edad;
-	boolean idiomas ;
+	
+	
+	private boolean idiomas ;
 	
 	//Constructor
 	
 	public Administrativo(String nombre, int edad, boolean idiomas) {
-		super();
-		this.nombre = nombre;
-		this.edad = edad;
+		super(nombre, edad);
 		this.idiomas = idiomas;
 	}
 	
 	public Administrativo(String nombre) {
-		super();
-		this.nombre = nombre;
+		
+		super(nombre, 0);
 		this.idiomas = false;
 	}
 	
 	//Getters y Setters
-	
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
 	
 	public boolean isIdiomas() {
 		return idiomas;
