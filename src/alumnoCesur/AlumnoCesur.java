@@ -9,7 +9,11 @@ public class AlumnoCesur {
 		System.out.println(cesurEste);
 		System.out.println(cesurPTA);
 		
-		
+		Clase claseTemp;
+		for( int i = 0 ; i < 5; i++) {
+			 claseTemp = new Clase(Creator.newClase());
+			
+		}
 	}
 
 }
