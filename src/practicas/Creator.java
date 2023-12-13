@@ -30,4 +30,14 @@ public class Creator {
 	 return(17+ aleatorio.nextInt(30));
  }
  
+ private static String[] asistencia = { "premiumPlus", "online", "presencial"};
+ private static String[] tipoCurso = { "DAM", "DAW", "CiberSeguridad","BigData"};
+ 
+ public static String newClase() {
+	 
+	 Random aleatorio = new Random();
+		return (asistencia[aleatorio.nextInt(asistencia.length)])+" "+
+				(tipoCurso[aleatorio.nextInt(tipoCurso.length)]);
+ }
+ 
 }
