@@ -5,16 +5,19 @@ public class Insecto extends Animal {
 	private boolean alas;
 
 	private boolean antenas;
-	
-	private Enemigo enemigo;
 
-	public Insecto(String nombre, int tpvida, boolean alas, boolean antenas , String enemigo) {
+	private Enemigo[] enemigos;
+
+	public String atributo;
+
+	public Insecto(String nombre, int tpvida, boolean alas, boolean antenas) {
 
 		super(nombre, tpvida);
-		
-		this.enemigo = new Enemigo(enemigo);
+
 		this.alas = alas;
 		this.antenas = antenas;
+		atributo = "Soy insecto";
+		enemigos = new Enemigo[5];
 	}
 
 	public boolean isAlas() {
@@ -32,16 +35,26 @@ public class Insecto extends Animal {
 	public void setAntenas(boolean antenas) {
 		this.antenas = antenas;
 	}
-	
 
-	public Enemigo getEnemigo() {
-		return enemigo;
+	public Enemigo[] getEnemigos() {
+		return enemigos;
 	}
 
-	public void setEnemigo(Enemigo enemigo) {
-		this.enemigo = enemigo;
-	}
+	public void setEnemigo(String enemigo) {
 
+		int x = 0;
+
+		for (int i = 0; i < 5; i++) {
+
+			if (enemigos[x] == null) {
+
+				enemigos[x] = new Enemigo(enemigo);
+			}
+			x++;
+
+		}
+
+	}
 
 	class Enemigo {
 
