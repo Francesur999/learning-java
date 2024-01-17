@@ -26,7 +26,7 @@ class MiArray {
 
 		for (int i = 0; i < miArray.length; i++) {
 
-			miArray[i] = 0;
+			miArray[i] = -1;
 
 		}
 	}
@@ -37,7 +37,7 @@ class MiArray {
 
 		for (int i = 0; i < miArray.length; i++) {
 
-			miArray[i] = 0;
+			miArray[i] = -1;
 
 		}
 
@@ -75,22 +75,67 @@ class MiArray {
 			miArray[i] = 0;
 		}
 
-		
-
 	}
 
-	public void setInsertar( int valor) {
+	public void Insertar(int valor) {
 
-		if ( numElem == miArray.length) {
-			
+		if (numElem == miArray.length) {
+
 			System.out.println("Array lleno");
-			
-		}else {
-			
-			miArray[numElem]= valor;
+
+		} else {
+
+			miArray[numElem] = valor;
 			numElem++;
 		}
-		
 
 	}
+
+	public int sacarValorUltimo() {
+
+		int temp;
+
+		if (numElem != 0) {
+			temp = miArray[numElem - 1];
+
+			miArray[numElem] = -1;
+			numElem--;
+
+			return temp;
+
+		} else {
+
+			return -1;
+		}
+
+	}
+
+	public int sacarValorPrimero() {
+
+		int temp;
+
+		if (numElem == 0) {
+
+			return -1;
+
+		} else {
+
+			temp = miArray[0];
+			
+			for(int i = 0; i<numElem-1;i++) {
+				
+				miArray[i]=miArray[i+1];
+				
+			}
+			miArray[numElem-1]=-1;
+			numElem--;
+
+			
+
+			return temp;
+
+		}
+
+	}
+
 }
