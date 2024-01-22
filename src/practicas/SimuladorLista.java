@@ -1,17 +1,80 @@
 package practicas;
 
+import java.util.Random;
+
 public class SimuladorLista {
 
 	public static void main(String[] args) {
 
-		MiArray antonio;
-		MiArray anthony;
+		MiArray antonio = new MiArray(100);
+		int par = 0;
+		int impar = 0;
+		Random aleatorio = new Random();
 
-		antonio = new MiArray();
-		anthony = new MiArray(40);
+		for (int i = 0; i < antonio.getMiArray().length; i++) {
+			antonio.getMiArray()[i] = aleatorio.nextInt(100);
+		}
 
+		for (int i = 0; i < antonio.getMiArray().length; i++) {
+
+			if (antonio.getIntMiArray(i) % 2 == 0) {
+
+				par++;
+
+			} else {
+
+				impar++;
+
+			}
+
+		}
+		System.out.println("El total entre pares e impares es de:  " + (par + impar));
+
+		MiArray listaPares = new MiArray(par);
+		MiArray listaImpares = new MiArray(impar);
+
+		for (int i = 0; i < antonio.getMiArray().length; i++) {
+
+			if (antonio.getMiArray()[i] % 2 == 0) {
+
+				listaPares.insertar(antonio.getIntMiArray(i));
+
+			} else {
+
+				listaImpares.insertar(antonio.getIntMiArray(i));
+
+			}
+
+		}
+
+		for (int i = 0; i < listaImpares.getMiArray().length; i++) {
+
+		}
+
+		for (int i = 0; i < listaPares.getMiArray().length; i++) {
+
+		}
+
+		antonio.resetear();
+
+		for (int i = 0; i < antonio.getMiArray().length; i = i + 2) {
+
+			for (int x = 0; x < listaPares.getMiArray().length; x++) {
+
+				antonio.insertar(listaPares.getIntMiArray(x));
+
+			}
+		}
+
+		for (int i = 1; i < antonio.getMiArray().length; i = i + 2) {
+
+			for (int x = 0; x < listaImpares.getMiArray().length; x++) {
+
+				antonio.insertar(listaImpares.getIntMiArray(x));
+			}
+		}
+		System.out.print(antonio.getMiArray() + " ");
 	}
-
 }
 
 class MiArray {
@@ -77,7 +140,7 @@ class MiArray {
 
 	}
 
-	public void Insertar(int valor) {
+	public void insertar(int valor) {
 
 		if (numElem == miArray.length) {
 
@@ -121,16 +184,14 @@ class MiArray {
 		} else {
 
 			temp = miArray[0];
-			
-			for(int i = 0; i<numElem-1;i++) {
-				
-				miArray[i]=miArray[i+1];
-				
-			}
-			miArray[numElem-1]=-1;
-			numElem--;
 
-			
+			for (int i = 0; i < numElem - 1; i++) {
+
+				miArray[i] = miArray[i + 1];
+
+			}
+			miArray[numElem - 1] = -1;
+			numElem--;
 
 			return temp;
 
