@@ -11,7 +11,7 @@ public class Gestion {
 		Piloto segundo = new Piloto(2,"Natasha Phoenix",3000,"teniente");
 		Piloto tercero = new Piloto(3,"Bradley Rooster",3500,"teniente");
 
-	 System.out.println("Introduce el id que no sea ni 1 ,2 ,3 , el nombre del piloto , las horas de vuelo  y su rango (EN ESTE ORDEN)");
+	 System.out.println("Introduce el id (que no sea ni 1 ,2 ,3), el nombre del piloto , las horas de vuelo  y su rango (EN ESTE ORDEN)");
 	 
 	 Piloto cuarto = new Piloto (teclado.nextInt(), teclado.next(), teclado.nextInt(), teclado.next());
 	 
@@ -39,9 +39,13 @@ public class Gestion {
 	 
 	 
 	 uno.mostrarAvion();
+	 System.out.println(" ");
 	 dos.mostrarAvion();
+	 System.out.println(" ");
 	 tres.mostrarAvion();
+	 System.out.println(" ");
 	 cuatro.mostrarAvion();
+	 System.out.println(" ");
 	 cinco.mostrarAvion();
 	
 	}
