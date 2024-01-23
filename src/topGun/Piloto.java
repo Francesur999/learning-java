@@ -2,29 +2,29 @@ package topGun;
 
 public class Piloto {
 //ATRIBUTOS
-	private int idPiloto;
+	private final int idPiloto;
 	private String nomPiloto;
 	private int horasVueloPiloto;
 	private String rangoPiloto;
+	private static int contador = 0;
     
 
-//CONSTRUCTOR
-	public Piloto(int idPiloto, String nomPiloto, int horasVueloPiloto, String rangoPiloto) {
+
+	//CONSTRUCTOR
+	public Piloto( String nomPiloto, int horasVueloPiloto, String rangoPiloto) {
 		super();
-		this.idPiloto = idPiloto;
+		contador++;
+		this.idPiloto = contador;
 		this.nomPiloto = nomPiloto;
 		this.horasVueloPiloto = horasVueloPiloto;
 		this.rangoPiloto = rangoPiloto;
+
 		
 	}
 
 //GETTERS Y SETTERS
 	public int getIdPiloto() {
 		return idPiloto;
-	}
-
-	public void setIdPiloto(int idPiloto) {
-		this.idPiloto = idPiloto;
 	}
 
 	public String getNomPiloto() {
@@ -49,6 +49,9 @@ public class Piloto {
 
 	public void setRangoPiloto(String rangoPiloto) {
 		this.rangoPiloto = rangoPiloto;
+	}
+	public static int getContador() {
+		return contador;
 	}
 
 	// TO STRING

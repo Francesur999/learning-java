@@ -4,18 +4,25 @@ public class Avion {
 
 	// ATRIBUTOS
 
-	private int idAvion;
+	private final int idAvion;
 	private String modAvion;
 	private int capAvion;
 	private Piloto piloto;
+	private static int contador = 0;
+	private int combustible;
 
+	
 	// CONSTRUCTOR
-	public Avion(int idAvion, String modAvion, int capAvion, Piloto piloto) {
+	public Avion( String modAvion, int capAvion, Piloto piloto) {
 		super();
-		this.idAvion = idAvion;
+		contador++;
+		combustible = 0;
+		this.idAvion = contador;
 		this.modAvion = modAvion;
 		this.capAvion = capAvion;
 		this.piloto = piloto;
+		
+	
 	}
 
 	// GETTERS Y SETTERS
@@ -24,9 +31,6 @@ public class Avion {
 		return idAvion;
 	}
 
-	public void setIdAvion(int idAvion) {
-		this.idAvion = idAvion;
-	}
 
 	public String getModAvion() {
 		return modAvion;
@@ -51,6 +55,22 @@ public class Avion {
 	public void setPiloto(Piloto piloto) {
 		this.piloto = piloto;
 	}
+	public static int getContador() {
+		return contador;
+	}
+	
+	public int getCombustible() {
+		return combustible;
+	}
+
+	public void setConsumir(int combustible) {
+		this.combustible = combustible;
+	}
+	
+	public void setRellenar(int combustible) {
+		this.combustible = combustible;
+	}
+
 
 	// TO STRING
 	public void mostrarAvion() {
