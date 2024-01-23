@@ -63,12 +63,12 @@ public class Avion {
 		return combustible;
 	}
 
-	public void setConsumir(int combustible) {
-		this.combustible = combustible;
+	public void setConsumir(int consumo) {
+		this.combustible = combustible-consumo;
 	}
 	
-	public void setRellenar(int combustible) {
-		this.combustible = combustible;
+	public void setRellenar(int relleno) {
+		this.combustible = combustible+relleno;
 	}
 
 
