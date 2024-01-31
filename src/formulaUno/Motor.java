@@ -1,12 +1,12 @@
 package formulaUno;
 
 public class Motor {
-    
-	private int idMotor;
+
+	private final int idMotor;
 	private Cilindro cilindro;
 	private Turbo turbo;
 	private Ingeniero ingeniero;
-	
+
 	public Motor(int idMotor, Cilindro cilindro, Turbo turbo, Ingeniero ingeniero) {
 		super();
 		this.idMotor = idMotor;
@@ -17,10 +17,6 @@ public class Motor {
 
 	public int getIdMotor() {
 		return idMotor;
-	}
-
-	public void setIdMotor(int idMotor) {
-		this.idMotor = idMotor;
 	}
 
 	public Cilindro getCilindro() {
@@ -46,7 +42,5 @@ public class Motor {
 	public void setIngeniero(Ingeniero ingeniero) {
 		this.ingeniero = ingeniero;
 	}
-	
-	
-	
+
 }
