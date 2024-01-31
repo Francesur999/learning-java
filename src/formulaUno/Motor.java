@@ -6,9 +6,11 @@ public class Motor {
 	private Cilindro cilindro;
 	private Turbo turbo;
 	private Ingeniero ingeniero;
+	private final int trabIng;
 
 	public Motor(int idMotor, Cilindro cilindro, Turbo turbo, Ingeniero ingeniero) {
 		super();
+		this.trabIng = ingeniero.getTrabajo();
 		this.idMotor = idMotor;
 		this.cilindro = cilindro;
 		this.turbo = turbo;
@@ -41,6 +43,11 @@ public class Motor {
 
 	public void setIngeniero(Ingeniero ingeniero) {
 		this.ingeniero = ingeniero;
+	}
+	
+	public int construido() {
+
+		return ((cilindro.construido() + turbo.construido() + trabIng) / 3);
 	}
 
 }

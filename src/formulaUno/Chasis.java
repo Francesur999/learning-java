@@ -1,17 +1,21 @@
 package formulaUno;
 
+import java.util.Random;
+
 public class Chasis {
 
 	private final int idChasis;
 	private final int material;
-	private Ingeniero ingeniero;
+	private final Ingeniero ingeniero;
 	private final int trabIng;
 
 	public Chasis(int idChasis, int material, Ingeniero ingeniero) {
 		super();
+		Random aleatorio = new Random();
 		this.trabIng = ingeniero.getTrabajo();
 		this.idChasis = idChasis;
-		this.material = material;
+		this.material = aleatorio.nextInt(10);
+		;
 		this.ingeniero = ingeniero;
 	}
 
@@ -27,13 +31,9 @@ public class Chasis {
 		return ingeniero;
 	}
 
-	public void setIngeniero(Ingeniero ingeniero) {
-		this.ingeniero = ingeniero;
-	}
+	public int construido() {
 
-	public int getConstruido() {
-
-		return ((material +  trabIng) / 3);
+		return ((material + trabIng) / 3);
 	}
 
 }

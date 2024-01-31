@@ -1,20 +1,29 @@
 package formulaUno;
 
+import java.util.Random;
+
 public class Neumatico {
+
+	private enum tipoDureza {
+		blando, medio, duro
+	};
+
+	private tipoDureza dureza;
 
 	private final int idNeumatico;
 	private final int material;
-	private Ingeniero ingeniero;
-	private final int tipo;
+	private final Ingeniero ingeniero;
 	private final int trabIng;
 
-	public Neumatico(int idNeumatico, int material, Ingeniero ingeniero, int tipo) {
+	public Neumatico(int idNeumatico, int material, Ingeniero ingeniero) {
 		super();
+		Random aleatorio = new Random();
 		this.trabIng = ingeniero.getTrabajo();
 		this.idNeumatico = idNeumatico;
-		this.material = material;
+		this.material = aleatorio.nextInt(10);
+		;
 		this.ingeniero = ingeniero;
-		this.tipo = tipo;
+		this.dureza = null;
 	}
 
 	public int getIdNeumatico() {
@@ -29,17 +38,39 @@ public class Neumatico {
 		return ingeniero;
 	}
 
-	public void setIngeniero(Ingeniero ingeniero) {
-		this.ingeniero = ingeniero;
+	public tipoDureza getDureza() {
+		return dureza;
 	}
 
-	public int getTipo() {
-		return tipo;
+	public void setDureza(String dureza) {
+
+		switch (dureza) {
+
+		case "blando":
+
+			this.dureza = tipoDureza.blando;
+			break;
+		case "medio":
+			this.dureza = tipoDureza.medio;
+			break;
+		case "duro":
+			this.dureza = tipoDureza.duro;
+			break;
+		default:
+			System.out.println("Puto inutil");
+
+		}
+
 	}
-	
-	public int getConstruido() {
+
+	public void setDureza(tipoDureza dureza) {
 		
-		return((material + tipo + trabIng)/3);
+		this.dureza = dureza;
+	}
+
+	public int construido() {
+
+		return ((material + trabIng) / 3);
 	}
 
 }
