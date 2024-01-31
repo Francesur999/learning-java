@@ -1,34 +1,29 @@
 package formulaUno;
 
-public class Ingeniero extends Persona{
-	
-	private int inteligencia;
-	
-	private int innovacion;
-	
+import java.util.Random;
+
+public class Ingeniero extends Persona {
+
+	private final int inteligencia;
+
+	private final int innovacion;
+
 	private int experiencia;
 
 	public Ingeniero(int edad, String nombre, int dni, int inteligencia, int innovacion, int experiencia) {
 		super(edad, nombre, dni);
-		this.inteligencia = inteligencia;
-		this.innovacion = innovacion;
-		this.experiencia = experiencia;
+		Random aleatorio = new Random ();
+		this.inteligencia = aleatorio.nextInt(10);;
+		this.innovacion = aleatorio.nextInt(10);;
+		this.experiencia = aleatorio.nextInt(10);;
 	}
 
 	public int getInteligencia() {
 		return inteligencia;
 	}
 
-	public void setInteligencia(int inteligencia) {
-		this.inteligencia = inteligencia;
-	}
-
 	public int getInnovacion() {
 		return innovacion;
-	}
-
-	public void setInnovacion(int innovacion) {
-		this.innovacion = innovacion;
 	}
 
 	public int getExperiencia() {
@@ -39,6 +34,10 @@ public class Ingeniero extends Persona{
 		this.experiencia = experiencia;
 	}
 	
+	public int getTrabajo() {
+		
+		return((inteligencia + innovacion + experiencia)/3);
+	}
 	
 
 }
