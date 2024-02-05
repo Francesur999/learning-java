@@ -26,8 +26,6 @@ public class Escuderia {
 
 	}
 
-	public void destruirCoche(Coche coche) {
-	}
 
 	public void construirCoche(Coche coche) {
 
@@ -39,14 +37,26 @@ public class Escuderia {
 		pilotos.insertarValor(piloto);
 	}
 
-	public void construirCoche(Ingeniero ingeniero) {
+	public void construirIngeniero(Ingeniero ingeniero) {
 
 		ingenieros.insertarValor(ingeniero);
 	}
 
-	public void construirCoche(Mecanico mecanico) {
+	public void construirMecanico(Mecanico mecanico) {
 
 		mecanicos.insertarValor(mecanico);
+	}
+	
+	public void destruirCoche(Coche coche) {
+	}
+	
+	public void destruirPiloto(Coche coche) {
+	}
+	
+	public void destruirIngeniero(Coche coche) {
+	}
+	
+	public void destruirMecanico(Coche coche) {
 	}
 
 }
