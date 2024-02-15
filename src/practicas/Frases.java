@@ -49,3 +49,18 @@ public class Frases {
 	}
 
 }
+
+
+for ( int i = 0 ; i <array.length ; i++) {
+	  int h;
+	  
+	do {
+		  
+	   h = aleatorio.nextInt(max); 
+	  
+	  }while(h > max || h < min);
+	  
+	  array[i] = h ; 
+	 
+	  System.out.print(array[i]+" ");
+}

@@ -1,35 +1,54 @@
 package animales;
+import java.util.Random;
 
 public class UsoAnimales {
 
 	public static void main(String[] args) {
+	
 		
-		Mamifero perro = new Mamifero("perro",15,true);
+		Random aleatorio = new Random();
+		int[]enteros = new int [10];
 		
-		Insecto hormiga = new Insecto("Hormiga",1,false,true,"oso hormiguero");
+		for (int i = 0; i < enteros.length; i++) {
+			enteros[i]= aleatorio.nextInt(10);
+			System.out.print(enteros[i]+" ");
+		}
 		
-		System.out.println("El animal "+hormiga.getNombre()+" tiene alas?: "+hormiga.isAlas());
-		System.out.println(hormiga.getEnemigo().getNombre()+" es el enemigo de la "+hormiga.getNombre());
+		int numero = aleatorio.nextInt(10);
+		int cont = 0;
 		
-		Insecto volantona;
-		volantona = hormiga;
-		volantona.setNombre("volantona");
+		boolean encontrado = false;
 		
-		Insecto atomica = new Insecto(
+		int i = 0  ;
+			
+		while ( i < enteros.length && ! encontrado) {
+			
+			if ( enteros[i]== numero) {
 				
-				hormiga.getNombre()+"atomica",
-				hormiga.getTpvida(),
-				hormiga.isAlas(),
-				hormiga.isAntenas(),
-				hormiga.getEnemigo().getNombre()
-				);
-		hormiga.setAlas(true);
-		System.out.println("El animal "+hormiga.getNombre()+" tiene alas?: "+hormiga.isAlas());		
-		System.out.println("El animal "+atomica.getNombre()+" tiene alas?: "+atomica.isAlas());		
-		System.out.println("El animal "+volantona.getNombre()+" tiene alas?: "+volantona.isAlas());		
-		volantona.setNombre(atomica.getNombre());
+				encontrado = true;
+				cont++;
+			}
+			
+			i++;
+			
+			
+		}
+
+		if (encontrado == true) {
+			
+			System.out.println("Enocntrado;"+numero+":"+encontrado);
+			System.out.println("Encontrado "+cont+" veces");
+		}else {
+			System.out.println("El numero "+numero+ " no se ha encontrado.");
+		}
 		
-		System.out.println("Volantona dice: "+volantona.atributo);
+			
+		}
+		
+		
+	
+		
+		
 	}
 
-}
+
