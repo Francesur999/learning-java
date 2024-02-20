@@ -71,7 +71,7 @@ public class EjemplosFicheros {
 		System.out.println(" ");
 
 		FileWriter fwriter = null;
-		String fraseNueva;
+		String fraseNueva = null;
 		Scanner teclado = new Scanner(System.in);
 
 		try {
@@ -103,6 +103,36 @@ public class EjemplosFicheros {
 			}
 
 		}
+		
+		FileReader entrada2 = null;
+		boolean nofin2 = true;
+		char caracter2;
+		try {
+			entrada2 = new FileReader("Fichero3.txt");
 
+			do {
+
+				caracter2 = (char) entrada2.read();
+
+				if (caracter2 == (char) -1) {
+
+					nofin2 = false;
+				} else {
+					System.out.print(caracter2);
+				}
+			} while (nofin2);
+
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if (entrada2 != null) {
+
+				entrada2.close();
+			}
+
+		}
+
+		
+		
 	}
 }
