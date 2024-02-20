@@ -41,7 +41,7 @@ public class EjemploFichero3 {
 			char caracter2 = (char) entrada.read();
 			
 			do {
-			System.out.println("Cuantas lineas quieres escribir");
+			System.out.println("Cuantas lineas quieres escribir entre 1 y 4");
 			linea = teclado.nextInt();
 			}while(linea<=0 || linea >4);
 
