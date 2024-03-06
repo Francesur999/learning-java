@@ -1,11 +1,13 @@
 package animales;
 
-public class Animal {
+import java.io.Serializable;
+
+public class Animal implements Serializable {
 
 	private String nombre;
 	private int tpvida;
 
-	protected Animal(String nombre, int tpvida) {
+	public Animal(String nombre, int tpvida) {
 
 		this.nombre = nombre;
 
