@@ -5,11 +5,64 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class ejercicio1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		Scanner teclado = new Scanner(System.in);
 
+		String nombre1;
+		String nombre2;
+		String ruta;
+
+		do {
+			System.out.println("Escribe el nombre del primer fichero ");
+			nombre1 = teclado.nextLine();
+		} while (nombre1.length() < 2);
+
+		System.out.println("El nombre del fichero: " + nombre1 + " es válido");
+		System.out.println(" ");
+
+		do {
+			System.out.println("Escribe el nombre del segundo fichero ");
+			nombre2 = teclado.nextLine();
+		} while (nombre2.length() < 2);
+
+		System.out.println("El nombre del fichero: " + nombre2 + " es válido");
+		System.out.println(" ");
+
+		ruta = System.getProperty("user.dir");
+		System.out.println("Ruta de mi directorio actual: " + ruta);
+
+		String directorioActual = System.getProperty("user.dir");
+
+		String rutaCompletaFich1 = directorioActual + File.separator + nombre1;
+		String rutaCompletaFich2 = directorioActual + File.separator + nombre2;
+		
+		File fichero1 = new File(rutaCompletaFich1);
+		File fichero2 = new File(rutaCompletaFich2);
+
+		if (comprobarExiste(nombre1)) {
+
+			System.out.println("El fichero: " + nombre1 + " ya existe");
+
+		} else {
+			fichero1.createNewFile();
+		}
+		
+		if (comprobarExiste(nombre2)) {
+
+			System.out.println("El fichero: " + nombre2 + " ya existe");
+
+		} else {
+			fichero2.createNewFile();
+		}
+		if (comprobarExiste(nombre1)) {
+			escribirEnFichero(fichero1);
+		}
+		
+		teclado.close();
 	}
 
 	static boolean leerDeFichero(File miFichero) throws IOException {
@@ -77,7 +130,7 @@ public class ejercicio1 {
 			salida = new FileWriter(miFichero);
 			for (int i = 0; i < 11; i++) {
 
-				salida.write((char) i);
+				salida.write(" "+i);
 				salida.write('\n');
 
 			}
